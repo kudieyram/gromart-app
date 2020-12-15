@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css' 
 import {
     Link,
@@ -7,37 +7,109 @@ import {
 
 function SignUp (){
 
+    const routeHistory = useHistory()
+
+    // Defining Variable that will be called to action
+    const [fullname, setFullName] = useState("")
+
+    const [email, setEmail] = useState("")
+
+    const [password, setPassword] = useState("")
+
+    const [confirmPassword, setConfirmPassword] = useState("")
+
+    function handleFullNameChange (e){
+        setFullName(e.target.value)
+    };
+
+    function handleEmailChange (e){
+        setEmail(e.target.value)
+    };
+
+    function handlePasswordChange (e){
+        setPassword(e.target.value)
+    };
+
+    function handleConfirmPasswordChange (e){
+        setConfirmPassword(e.target.value)
+    }
+
+    function handleSignUp (e){
+        e.preventDefault();
+        if (fullname === "" || email === "" || password === "" || confirmPassword === ""){
+            alert("Sign Up Unsuccessful")
+            return
+        };
+
+        if ( password !== confirmPassword){
+            alert("Passwords doesn't match")
+            return
+        };
+
+        routeHistory.push('/dashboard')
+    }
+
+        
+
 
     return(
-        <div className='login-wrapper'>
+        <div className="login-wrapper">
             <div className="login-form">
-            <form>
-            <h2 className="text-center">Log in</h2>       
-                <div className="form-group">
-                    <input 
-                        type="email" 
-                        className="form-control" 
-                        placeholder="Email" 
-                        required="required" 
-                        name="email" />
-                </div>
+                <form>
+                <h2 className="text-center">Sign up</h2>       
+                    <div className="form-group">
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            placeholder="Full Name" 
+                            required="required"
+                            value={fullname}
+                            onChange={handleFullNameChange}/>
+                    </div>
 
-            <div className="form-group">
-                <input 
-                    type="password" 
-                    className="form-control" 
-                    placeholder="Password" 
-                    required="required" 
-                    name="password" />
-            </div>
-            
-            <div className="form-group">
-                <button className="btn btn-primary btn-block" >Log in</button>
-            </div>
-    </form>
-    <p className="text-center">Not Registered?<Link to ='/signup'>Create an Account</Link></p>
+                    <div className="form-group">
+                        <input 
+                            type="email" 
+                            className="form-control" 
+                            placeholder="Email" 
+                            required="required" 
+                            value={email}
+                            onChange={handleEmailChange} />
+                    </div>
 
-</div>
+                    <div className="form-group">
+                        <input 
+                            type="password" 
+                            className="form-control" 
+                            placeholder="Password" 
+                            required="required" 
+                            value={password} 
+                            onChange={handlePasswordChange}/>
+                    </div>
+
+                    <div className="form-group">
+                        <input 
+                            type="password" 
+                            className="form-control" 
+                            placeholder="Confirm Password" 
+                            required="required" 
+                            value={confirmPassword} 
+                            onChange={handleConfirmPasswordChange} />
+                    </div>
+
+                    <div className="form-group">
+                        <button 
+                            className="btn btn-primary btn-block" 
+                            onClick={handleSignUp}>
+                                Sign Up
+                        </button>
+
+                    </div>    
+            </form>
+    
+                    <p className="text-center">Already have an account?<Link to='/login'>Log In</Link></p>
+
+        </div>
         </div>
     )
 }

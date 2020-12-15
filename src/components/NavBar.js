@@ -9,11 +9,8 @@ function NavBar() {
           <div className="container">
                <div className="col-md-2">
                <Link className="navbar-brand" to="/">
-               <img 
-                src="/docs/4.1/assets/brand/bootstrap-solid.svg" 
-                width="30" 
-                height="30" 
-                class="d-inline-block align-top" 
+               <span 
+                class="d-inline-block align-top brand-image" 
                 alt=""/>
                Gromart
             </Link>
@@ -39,7 +36,7 @@ function NavBar() {
                </div>
                <div className="col-md-1">
                     <Link class="nav-item" to="/signup">
-                        <span class="nav-link">SignUp</span>
+                        <span class="nav-link">Signup</span>
                     </Link>
                </div>
           </div>
