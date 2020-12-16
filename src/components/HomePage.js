@@ -6,6 +6,7 @@ import PagePic from './PagePic';
 
 
 function HomePage() {
+
     return (
         <div>
             <NavBar/>
@@ -14,7 +15,11 @@ function HomePage() {
             
             <div className="container mt-4">
                 <div className="card card-width">
-                    <img className="card-img-top" src="https://en.wikipedia.org/wiki/File:Tomato_je.jpg" alt="Card image cap"/>
+                    <img 
+                        className="card-img-top" 
+                        src="https://en.wikipedia.org/wiki/File:Tomato_je.jpg" 
+                        alt="Card image cap"/>
+
                     <div className="card-body">
                     <h5 className="card-title">Tomato</h5>
                     <p 
@@ -25,9 +30,51 @@ function HomePage() {
                         className="btn btn-primary">
                         Click to add
                     </Link>
+                </div>
             </div>
-        </div>
             </div>
+            <div className="container mt-4">
+                <div className="card card-width">
+                    <img 
+                        className="card-img-top" 
+                        src="https://en.wikipedia.org/wiki/File:Tomato_je.jpg" 
+                        alt="Card image cap"/>
+
+                    <div className="card-body">
+                        <h5 className="card-title">Pepper</h5>
+                        <p 
+                            className="card-text">
+                            Price per kg - GHC 5.00
+                        </p>
+                        <Link 
+                            className="btn btn-primary">
+                            Click to add
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container mt-4">
+                <div className="card card-width">
+                    <img 
+                        className="card-img-top" 
+                        src="https://en.wikipedia.org/wiki/File:Tomato_je.jpg" 
+                        alt="Card image cap"/>
+
+                    <div className="card-body">
+                        <h5 className="card-title">Carrot</h5>
+                        <p 
+                            className="card-text">
+                            Price per kg - GHC 20.00
+                        </p>
+                        <Link 
+                            className="btn btn-primary">
+                            Click to add
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     )
 }
