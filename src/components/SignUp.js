@@ -107,7 +107,7 @@ function SignUp (){
                     </div>    
             </form>
     
-                    <p className="text-center">Already have an account?<Link to='/login'>Log In</Link></p>
+                    <p className="text-center">Already have a Gromart Account?<Link to='/login'>Log In</Link></p>
 
         </div>
         </div>

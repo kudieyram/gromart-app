@@ -4,11 +4,13 @@ import HomePage from './components/HomePage';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import NotFound from './components/NotFound';
+import ProductDetails from './components/ProductDetails';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/signup"><SignUp/></Route>
 
           <Route path="/dashboard"><HomePage/></Route>
+
+          <Route path="/productdetails"><ProductDetails/></Route>
 
           <Route exact path="/"><HomePage/></Route>
 

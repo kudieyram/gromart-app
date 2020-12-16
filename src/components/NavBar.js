@@ -12,7 +12,7 @@ function NavBar() {
                <span 
                 class="d-inline-block align-top brand-image" 
                 alt=""/>
-               Gromart
+               <span className="ml-1">Gromart </span>
             </Link>
                </div>
                <div className="col-md-8">
