@@ -1,14 +1,26 @@
 import React from 'react';
+import NavBar from './NavBar';
 
 
 function ProductDetails (){
-    return(
+     console.log(this.props.match.params.id)
+
+    return( 
         <div>
-            <form>
-                <h2> Product Details </h2>
-                <h4>  Title </h4>
-                
-            </form>
+            <NavBar/>
+
+            <div className="row">
+                <div className="col-md-8">
+
+
+                </div>
+
+                <div className="col-md-4">
+
+                </div>
+            
+            
+            </div>
         </div>
     )
 }

@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
+import NavBar from './NavBar';
 import { 
     Link,
     useHistory
 } from 'react-router-dom';
 
+
+// Defining the Login Function
 function LogIn (){
 
     const routeHistory = useHistory()
 
-    // Defining variables that will called to action
+// Setting my variables using useState 
 
     const [email, setEmail] = useState("")
 
     const [password, setPassword] = useState("")
 
+// Defining functions that are called  when they are called.
    function handleEmailChange (e){
        setEmail(e.target.value)
    };
-
+  
    function handlePasswordChange (e){
        setPassword(e.target.value)
    };
@@ -32,9 +36,9 @@ function LogIn (){
    }
 
         
-
     return(
-        <div className="login-wrapper container">
+        <div className="login-wrapper container page-pic">
+            <NavBar/>
             <div className="login-form">
             <form>
             <h2 className="text-center">Log in</h2>       

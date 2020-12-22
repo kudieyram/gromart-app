@@ -13,6 +13,7 @@ import {
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -21,20 +22,20 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          
+          {/* <Route path="/productdetails/:id"> <ProductDetails/> </Route> */}
+
+
           <Route path="/login"><LogIn/></Route>
 
           <Route path="/signup"><SignUp/></Route>
 
           <Route path="/dashboard"><HomePage/></Route>
 
-          <Route path="/productdetails"><ProductDetails/></Route>
-
           <Route exact path="/"><HomePage/></Route>
 
           <Route><NotFound/></Route>
-
-
-                
+    
         </Switch>
       </div>
     </Router>

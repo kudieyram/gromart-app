@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import NavBar from './NavBar'
 import 'bootstrap/dist/css/bootstrap.css' 
 import {
     Link,
     useHistory,
 } from 'react-router-dom'
+
 
 function SignUp (){
 
@@ -49,11 +51,10 @@ function SignUp (){
         routeHistory.push('/dashboard')
     }
 
-        
-
 
     return(
         <div className="login-wrapper">
+            <NavBar/>
             <div className="login-form">
                 <form>
                 <h2 className="text-center">Sign up</h2>       
