@@ -113,6 +113,10 @@
   font-size: 15px;
   font-weight: bold;
 }
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
 
 
 

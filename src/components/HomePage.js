@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavBar from './NavBar';
-import { products } from './Resources';
+import { products } from './products';
 import { 
     Link, 
     useHistory } from 'react-router-dom';
@@ -26,8 +26,8 @@ let history = useHistory();
         <div>
             <NavBar/>
           
-            <PagePic/> 
-            
+            <PagePic/>
+
             <div className="container mt-4">
             {products !==[] ? (
                 <div className="row">
@@ -40,10 +40,17 @@ let history = useHistory();
                                 className="card-text">
                                 {product.price}
                             </p>
+                            <div class="rating">
+                                <span> <i class="fa fa-star"></i> </span>
+                                <span> <i class="fa fa-star"></i> </span>
+                                <span> <i class="fa fa-star"></i> </span>
+                                <span> <i class="fa fa-star"></i> </span>
+                                <span> <i class="fa fa-star"></i> </span>
+                            </div>
                             <Link 
                                 className="btn btn-primary"
                                 onClick={() => handleClick(product.id)}>
-                                Click to add
+                                Click to buy
                             </Link>
                             </div>
                         </div>

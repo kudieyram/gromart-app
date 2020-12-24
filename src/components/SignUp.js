@@ -20,6 +20,7 @@ function SignUp (){
 
     const [confirmPassword, setConfirmPassword] = useState("")
 
+    // Defining functions that will be called when called to action.
     function handleFullNameChange (e){
         setFullName(e.target.value)
     };
@@ -36,6 +37,7 @@ function SignUp (){
         setConfirmPassword(e.target.value)
     }
 
+    // this function is always called whenever a signup action is called
     function handleSignUp (e){
         e.preventDefault();
         if (fullname === "" || email === "" || password === "" || confirmPassword === ""){
