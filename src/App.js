@@ -1,15 +1,17 @@
+
 import React from 'react';
 import './App.css';
-import HomePage from './components/HomePage';
+import Product from './components/HomePage';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import NotFound from './components/NotFound';
-import ProductDetails from './components/ProductDetails';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+import HomePage from './components/HomePage';
+import ProductDetails from './components/ProductDetails';
 
 
 
@@ -31,6 +33,8 @@ function App() {
           <Route path="/signup"><SignUp/></Route>
 
           <Route path="/dashboard"><HomePage/></Route>
+
+          <Route path="/productdetails"><ProductDetails/></Route>
 
           <Route exact path="/"><HomePage/></Route>
 

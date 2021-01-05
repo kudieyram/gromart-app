@@ -14,7 +14,8 @@ export const products = [{
     "name": "Pepper",
     "price": "GHC 25",
     "description": "Mango is a fruit",
-    "rating": 4.5,
+    "rating": 2,
+    "numReviews":5,
     "image": Pepper
  },
  {
@@ -23,6 +24,7 @@ export const products = [{
     "price": "GHC 25",
     "description": "Mango is a fruit",
     "rating": 4.5,
+    "numReviews":5,
     "image": Tomato
  }
  ,
@@ -32,6 +34,7 @@ export const products = [{
     "price": "GHC 25",
     "description": "Mango is a fruit",
     "rating": 4.5,
+    "numReviews":5,
     "image": carrot
  },
  {
@@ -40,6 +43,7 @@ export const products = [{
     "price": "GHC 25",
     "description": "Mango is a fruit",
     "rating": "4.5",
+    "numReviews":5,
     "image": Beetroot
  },
  {
@@ -48,6 +52,7 @@ export const products = [{
     "price": "GHC 25",
     "description": "Mango is a fruit",
     "rating": 4.5,
+    "numReviews":5,
     "image": cabbage
  },
  {
@@ -56,6 +61,7 @@ export const products = [{
     "price": "GHC 25",
     "description": "Mango is a fruit",
     "rating": 4.5,
+    "numReviews":5,
     "image": Lettuce
  },
  {
@@ -64,6 +70,7 @@ export const products = [{
    "price": "GHC 25",
    "description": "Mango is a fruit",
    "rating": 4.5,
+   "numReviews":5,
    "image": Cauliflower
 },
 {
@@ -72,6 +79,7 @@ export const products = [{
    "price": "GHC 25",
    "description": "Mango is a fruit",
    "rating": 4.5,
+   "numReviews":5,
    "image": springOnion
 },
 {
@@ -80,6 +88,7 @@ export const products = [{
    "price": "GHC 25",
    "description": "Mango is a fruit",
    "rating": 4.5,
+   "numReviews":5,
    "image": Cucumber
 },
 ] 

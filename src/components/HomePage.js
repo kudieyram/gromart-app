@@ -1,7 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavBar from './NavBar';
-import { products } from './products';
+import Rating from './Rating'
+import { products } from './Products';
 import { 
     Link, 
     useHistory } from 'react-router-dom';
@@ -18,8 +19,8 @@ let history = useHistory();
 
 // this function is called whenever an enduser clicks on the click to add button
 
-  function handleClick(id) {
-    history.push("/productdetails/?id="+id);
+  function handleClick() {
+    history.push("/productdetails");
   }
 
     return (
@@ -40,18 +41,16 @@ let history = useHistory();
                                 className="card-text">
                                 {product.price}
                             </p>
-                            <div class="rating">
-                                <span> <i class="fa fa-star"></i> </span>
-                                <span> <i class="fa fa-star"></i> </span>
-                                <span> <i class="fa fa-star"></i> </span>
-                                <span> <i class="fa fa-star"></i> </span>
-                                <span> <i class="fa fa-star"></i> </span>
-                            </div>
+                             <Rating 
+                            rating={product.rating} 
+                            numReviews={product.numReviews}
+                            ></Rating>
                             <Link 
                                 className="btn btn-primary"
                                 onClick={() => handleClick(product.id)}>
                                 Click to buy
                             </Link>
+                           
                             </div>
                         </div>
                     ))}
